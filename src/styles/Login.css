@@ -1,0 +1,171 @@
+/* password input wrapper */
+.login-card {
+  width: 430px;  
+  height: 490px;               /* smaller card like design */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid #f1f3f5;
+
+}
+.login-card h4{
+  font-size: 20px;
+  font-weight: 600;
+   margin-bottom: 4px;
+}
+
+.login-card p{
+  font-size: 13px;
+   margin-bottom: 8px;
+}
+/* Avatar circle */
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 96px;
+  background: #f1f3f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  
+}
+.avatar img {
+   width: 88px;
+  height: 88px;
+  opacity: 1;
+}
+
+/* Divider */
+.register-card hr {
+  margin: 12px 0;
+  border-top: 1px solid #E5E5E5;
+}
+.register-card hr {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+/* Labels */
+.form-label {
+  font-weight: 500;
+  color: black;
+}
+
+/* Inputs */
+.form-control{
+  height: 40px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #E5E5E5;
+}
+
+.form-control:focus {
+  border-color: #3b6ef5;
+  box-shadow: none;
+}
+
+
+/* Icon inside input */
+.input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9aa0a6;
+  font-size: 14px;
+}
+
+/* Role buttons */
+.btn {
+  border-radius: 8px;
+  font-size: 13px;
+  /* padding: 8px; */
+  border-color:#e5e7eb;
+}
+
+.btn:hover {
+  border-color: #3563e9;
+}
+
+/* Next button */
+.btn-primary {
+  background: #3563e9;
+  border: none;
+  height: 42px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: #2e55c7;
+}
+.password-box{
+  position: relative;
+  width: 100%;
+}
+
+.password-box input{
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 14px;
+}
+
+/* lock icon */
+
+.left-icon{
+  position:absolute;
+  left:12px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#9aa0a6;
+}
+
+/* eye icon */
+
+.right-icon{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  color:#9aa0a6;
+}
+
+.right-icon:hover{
+  color:#3563e9;
+}
+
+/* remember + forgot section */
+
+.login-options{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:20px;
+  font-size:13px;
+}
+
+.remember{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:#344054;
+}
+
+.forgot{
+  text-decoration:none;
+  color:#3563e9;
+}
+
+.forgot:hover{
+  text-decoration:underline;
+}

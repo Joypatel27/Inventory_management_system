@@ -1,0 +1,90 @@
+
+
+/* Card */
+.otp-card {
+  width: 430px;  
+  height: 430px;               /* smaller card like design */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid #f1f3f5;
+
+}
+.otp-card h4{
+  font-size: 20px;
+  font-weight: 600;
+   margin-bottom: 4px;
+}
+
+.otp-card p{
+  font-size: 13px;
+   margin-bottom: 8px;
+}
+/* Avatar circle */
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 96px;
+  background: #f1f3f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  
+}
+.avatar img {
+   width: 88px;
+  height: 88px;
+  opacity: 1;
+}
+
+/* Divider */
+.otp-card hr {
+  margin: 12px 0;
+  border-top: 1px solid #E5E5E5;
+}
+.otp-card hr {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+
+/* OTP container */
+
+.otp-container{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:12px;
+}
+
+/* OTP input boxes */
+
+.otp-input{
+  width:48px;
+  height:48px;
+  border-radius:8px;
+  border:1px solid #e5e7eb;
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+}
+
+/* focus */
+
+.otp-input:focus{
+  outline:none;
+  border-color:#3563e9;
+}
+
+/* resend link */
+
+.resend-link{
+  color:#3563e9;
+  font-size:14px;
+  text-decoration:none;
+}
+
+.resend-link:hover{
+  text-decoration:underline;
+}
