@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { InputField } from "../components/form/InputField";
+import { PasswordField } from "../components/form/PasswordField";
 import "../styles/CreateAccount.css";
 import "../styles/Register.css";
-import logo from "../assets/logo.svg";
+import "../styles/AuthLayout.css";
 import avatar from "../assets/avatar.svg";
 import { useNavigate } from "react-router-dom";
+import { AuthHeader } from "../components/auth/authHeader";
+import { AuthFooter } from "../components/auth/AuthFooter";
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -13,10 +17,7 @@ export const Register = () => {
   return (
     <div className="vh-100 d-flex flex-column justify-content-center align-items-center">
       {/* Header */}
-      <header className="position-absolute top-0 start-0 p-3">
-        <img src={logo} alt="logo" width={40} height={40}  />
-      </header>
-
+      <AuthHeader />
       {/* Card */}
       <div className="register-card">
         {/* Avatar */}
@@ -31,7 +32,7 @@ export const Register = () => {
 
         <form>
           {/* Email */}
-          <div className="mb-2">
+          {/* <div className="mb-2">
             <label className="form-label">Email address</label>
 
             <div className="input-icon">
@@ -43,50 +44,21 @@ export const Register = () => {
                 placeholder="Enter your email"
               />
             </div>
-          </div>
+          </div> */}
+          <InputField
+            label="Email address"
+            type="text"
+            placeholder="Enter your email"
+            icon="fa-regular fa-envelope"
+          />
 
           {/* Password */}
-          <div className="mb-3">
-            <label className="form-label">Password</label>
+          <PasswordField label="Password" placeholder="Enter password" />
 
-            <div className="password-box">
-              <i className="fa-solid fa-lock left-icon"></i>
-
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Enter password"
-              />
-
-              <i
-                className={`fa-solid ${
-                  showPassword ? "fa-eye" : "fa-eye-slash"
-                } right-icon`}
-                onClick={() => setShowPassword(!showPassword)}
-              ></i>
-            </div>
-          </div>
-
-          {/* Confirm Password */}
-          <div className="mb-3">
-            <label className="form-label">Confirm Password</label>
-
-            <div className="password-box">
-              <i className="fa-solid fa-lock left-icon"></i>
-
-              <input
-                type={showConfirmPassword ? "text" : "password"}
-                // className="form-control ps-5"
-                placeholder="Confirm password"
-              />
-
-              <i
-                className={`fa-solid ${
-                  showConfirmPassword ? "fa-eye" : "fa-eye-slash"
-                } right-icon`}
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              ></i>
-            </div>
-          </div>
+          <PasswordField
+            label="Confirm Password"
+            placeholder="Confirm password"
+          />
         </form>
 
         {/* Register Button */}
@@ -108,9 +80,10 @@ export const Register = () => {
       </div>
 
       {/* Footer */}
-      <div className="position-absolute bottom-0 start-0 p-3 small text-muted">
+      {/* <div className="position-absolute bottom-0 start-0 p-3 small text-muted">
         © 2026 Inventory management system
-      </div>
+      </div> */}
+      <AuthFooter />
     </div>
   );
 };

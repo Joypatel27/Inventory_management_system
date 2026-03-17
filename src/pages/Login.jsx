@@ -1,54 +1,41 @@
 import React, { useState } from "react";
 import "../styles/CreateAccount.css";
 import "../styles/Login.css";
-
-import logo from "../assets/logo.svg";
+import "../styles/AuthLayout.css";
+import { InputField } from "../components/form/InputField";
 import avatar from "../assets/avatar.svg";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { AuthHeader } from "../components/auth/authHeader";
+import { AuthFooter } from "../components/auth/AuthFooter";
 
 export const Login = () => {
-
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   return (
     <div className="vh-100 d-flex flex-column justify-content-center align-items-center">
-
       {/* Header */}
-      <header className="position-absolute top-0 start-0 p-3">
-        <img src={logo} alt="logo" width={40} height={40}  />
-      </header>
+     <AuthHeader />
 
       {/* Login Card */}
       <div className="login-card">
-
         {/* Avatar */}
         <div className="avatar mb-3">
-          <img src={avatar} alt="avatar"/>
+          <img src={avatar} alt="avatar" />
         </div>
 
         <h4 className="text-center">Login to your account</h4>
-        <p className="text-muted text-center">
-          Enter your details to login.
-        </p>
+        <p className="text-muted text-center">Enter your details to login.</p>
 
-        <hr/>
+        <hr />
         <form>
-
           {/* Email */}
-          <div className="mb-3">
-            <label className="form-label">Email address</label>
-
-            <div className="input-icon position-relative">
-              <i className="fa-regular fa-envelope left-icon"></i>
-
-              <input
-                type="email"
-                className="form-control ps-5"
-                placeholder="Enter your email"
-              />
-            </div>
-          </div>
+          <InputField
+            label="Email address"
+            type="text"
+            placeholder="Enter your email"
+            icon="fa-regular fa-envelope"
+          />
 
           {/* Password */}
           <div className="mb-2">
@@ -73,36 +60,32 @@ export const Login = () => {
 
           {/* Remember + Forgot */}
           <div className="login-options">
-
             <label className="remember">
-              <input type="checkbox"/>
+              <input type="checkbox" />
               Keep me logged in
             </label>
 
-            <a  className="forgot" onClick={() => navigate("/forgot-password")}>
+            <a className="forgot" onClick={() => navigate("/forgot-password")}>
               Forgot password?
             </a>
-
           </div>
-
         </form>
 
         {/* Login Button */}
-        <button className="btn btn-primary w-100 mt-3" onClick={() => navigate("/dashboard")}>
+        <button
+          className="btn btn-primary w-100 mt-3"
+          onClick={() => navigate("/dashboard")}
+        >
           Login
         </button>
 
-         <p className="text-center text-muted small mt-2">
-          Don't have an account? <Link to="/create-account" >Sign Up Now</Link>
+        <p className="text-center text-muted small mt-2">
+          Don't have an account? <Link to="/create-account">Sign Up Now</Link>
         </p>
-
       </div>
 
       {/* Footer */}
-      <div className="position-absolute bottom-0 start-0 p-3 small text-muted">
-        © 2026 Inventory management system
-      </div>
-
+      <AuthFooter />
     </div>
   );
 };

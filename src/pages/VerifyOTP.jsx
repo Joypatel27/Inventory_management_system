@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react";
 import "../styles/CreateAccount.css";
 import "../styles/OTP.css";
-
+import "../styles/AuthLayout.css";
 import logo from "../assets/logo.svg";
 import emailVerification from "../assets/emailVerification.svg";
 import { useNavigate } from "react-router-dom";
+import { AuthHeader } from "../components/auth/authHeader";
+import { AuthFooter } from "../components/auth/AuthFooter";
 
 export const VerifyOTP = () => {
   const [otp, setOtp] = useState(["2", "7", "0", "4"]);
@@ -27,10 +29,7 @@ export const VerifyOTP = () => {
   return (
     <div className="vh-100 d-flex flex-column justify-content-center align-items-center">
       {/* Header */}
-      <header className="position-absolute top-0 start-0 p-3">
-        <img src={logo} alt="logo" width="40" height="40" />
-      </header>
-
+       <AuthHeader />
       {/* Card */}
       <div className="otp-card text-center">
         {/* Avatar */}
@@ -80,9 +79,7 @@ export const VerifyOTP = () => {
       </div>
 
       {/* Footer */}
-      <div className="position-absolute bottom-0 start-0 p-3 small text-muted">
-        © 2026 Inventory management system
-      </div>
+      <AuthFooter />
     </div>
   );
 };
