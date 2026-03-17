@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../styles/CreateAccount.css";
 import "../styles/Register.css";
-
 import logo from "../assets/logo.svg";
 import avatar from "../assets/avatar.svg";
 import { useNavigate } from "react-router-dom";

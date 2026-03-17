@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/CreateAccount.css";
-import "../assets/logo.png";
 import avatar from "../assets/avatar.svg";  
 import logo from "../assets/logo.svg";
-import { useNavigate } from "react-router-dom";
+import department from "../assets/department.svg";
+import { useNavigate,Link } from "react-router-dom";
 
 export const CreateAccount = () => {
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ export const CreateAccount = () => {
         <form>
 
           {/* Full Name */}
-          <div className="mb-3">
+          <div className="mb-2">
             <label className="form-label small">Full Name</label>
 
             <div className="input-icon">
@@ -48,11 +48,11 @@ export const CreateAccount = () => {
           </div>
 
           {/* Department */}
-          <div className="mb-3">
+          <div className="mb-2">
             <label className="form-label small">Department</label>
 
             <div className="input-icon">
-              <i className="fa-regular fa-building"></i>
+              <img src={department} alt="department" className="input-svg" />
               <input
                 type="text"
                 className="form-control ps-5"
@@ -62,7 +62,7 @@ export const CreateAccount = () => {
           </div>
 
           {/* Role */}
-          <div className="mb-3">
+          <div className="mb-2">
             <label className="form-label small">Role</label>
 
             <div className="d-flex gap-2">
@@ -77,7 +77,7 @@ export const CreateAccount = () => {
           </div>
 
           {/* Next Button */}
-          <button className="btn btn-primary w-100 mt-2" onClick={() => navigate("/register")}>
+          <button className="btn btn-primary w-100 mt-1" onClick={() => navigate("/register")}>
             Next
           </button>
 
@@ -85,7 +85,7 @@ export const CreateAccount = () => {
 
         {/* Login */}
         <p className="text-center text-muted small mt-2">
-          Already have an account? <a href="#">Login</a>
+          Already have an account? <Link to="/login" >Login</Link>
         </p>
 
       </div>
@@ -98,12 +98,3 @@ export const CreateAccount = () => {
     </div>
   );
 };
-
-
-
-
-
-
-
-
-

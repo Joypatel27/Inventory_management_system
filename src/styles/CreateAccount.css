@@ -6,23 +6,22 @@
 
 /* Card */
 .register-card {
-  width: 430px;  
-  height: 530px;               /* smaller card like design */
+  width: 430px;
+  height: 537px;
   background: #ffffff;
   border-radius: 16px;
   padding: 28px 24px;
   border: 1px solid #f1f3f5;
-
 }
-.register-card h4{
+.register-card h4 {
   font-size: 20px;
   font-weight: 600;
-   margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
-.register-card p{
+.register-card p {
   font-size: 13px;
-   margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 /* Avatar circle */
 .avatar {
@@ -34,23 +33,22 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  
 }
 .avatar img {
-   width: 88px;
+  width: 88px;
   height: 88px;
   opacity: 1;
 }
 
 /* Divider */
 .register-card hr {
-  margin: 12px 0;
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid rgba(226, 232, 240, 1) !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
-.register-card hr {
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
-}
+/* .register-card hr {
+ 
+} */
 
 /* Labels */
 .form-label {
@@ -59,8 +57,9 @@
 }
 
 /* Inputs */
-.form-control{
-  height: 40px;
+.form-control {
+  /* padding: 1px; */
+  height: 36px !important;
   border-radius: 8px;
   font-size: 14px;
   border: 1px solid #e5e7eb;
@@ -71,10 +70,16 @@
   box-shadow: none;
 }
 
-
-/* Icon inside input */
-.input-icon {
-  position: relative;
+/* Icon inside input */ 
+.input-icon .input-svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 .input-icon i {
@@ -88,10 +93,11 @@
 
 /* Role buttons */
 .btn {
+  height: 36px !important;
   border-radius: 8px;
   font-size: 13px;
   /* padding: 8px; */
-  border-color:#e5e7eb;
+  border-color: #e5e7eb;
 }
 
 .btn:hover {

@@ -4,7 +4,7 @@ import "../styles/Login.css";
 
 import logo from "../assets/logo.svg";
 import avatar from "../assets/avatar.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 export const Login = () => {
 
@@ -91,6 +91,10 @@ export const Login = () => {
         <button className="btn btn-primary w-100 mt-3" onClick={() => navigate("/dashboard")}>
           Login
         </button>
+
+         <p className="text-center text-muted small mt-2">
+          Don't have an account? <Link to="/create-account" >Sign Up Now</Link>
+        </p>
 
       </div>
 

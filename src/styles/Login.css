@@ -1,7 +1,7 @@
 /* password input wrapper */
 .login-card {
   width: 430px;  
-  height: 490px;               /* smaller card like design */
+  height: 500px;               /* smaller card like design */
   background: #ffffff;
   border-radius: 16px;
   padding: 28px 24px;
@@ -37,13 +37,14 @@
 }
 
 /* Divider */
-.register-card hr {
-  margin: 12px 0;
-  border-top: 1px solid #E5E5E5;
-}
-.register-card hr {
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
+ .login-card hr {
+
+  border-top: 1px solid  rgba(226, 232, 240, 0.24);
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+   /* border: none; */
+  opacity: 1;
+ 
 }
 
 /* Labels */

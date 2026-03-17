@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/CreateAccount.css";
 import "../styles/Register.css";
 import "../styles/ResetPassword.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 import avatar from "../assets/forgot.svg";
 import { useNavigate } from "react-router-dom";
 
