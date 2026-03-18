@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { PasswordField } from "../components/form/PasswordField";
 import { AuthHeader } from "../components/auth/authHeader";
 import { AuthFooter } from "../components/auth/AuthFooter";
+import { PrimaryButton } from "../components/auth/PrimaryButton";
 import "../styles/AuthLayout.css";
 import "../styles/CreateAccount.css";
 import "../styles/Register.css";
@@ -49,12 +50,9 @@ export const ResetPassword = () => {
         </form>
 
         {/* Reset Button */}
-        <button
-          className="btn btn-primary w-100 mt-2"
-          onClick={() => navigate("/login")}
-        >
-          Reset Password
-        </button>
+    
+                  <PrimaryButton text="Reset Password" onClick={() => navigate("/Login")} />
+        
 
         {/* Back */}
         <div className="back-btn mt-2" onClick={() => navigate("/login")}>

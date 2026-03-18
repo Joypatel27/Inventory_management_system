@@ -8,6 +8,8 @@ import avatar from "../assets/avatar.svg";
 import { useNavigate } from "react-router-dom";
 import { AuthHeader } from "../components/auth/authHeader";
 import { AuthFooter } from "../components/auth/AuthFooter";
+import { AuthAvatar } from "../components/auth/AuthAvatar";
+import { PrimaryButton } from "../components/auth/PrimaryButton";
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -21,9 +23,11 @@ export const Register = () => {
       {/* Card */}
       <div className="register-card">
         {/* Avatar */}
-        <div className="avatar mb-3">
+        {/* <div className="avatar mb-3">
           <img src={avatar} alt="avatar" />
-        </div>
+        </div> */}
+        <AuthAvatar svg={avatar} />
+        
 
         <h4 className="text-center">Register for System Access</h4>
         <p className="text-muted text-center">Enter your details to Sign up.</p>
@@ -62,13 +66,7 @@ export const Register = () => {
         </form>
 
         {/* Register Button */}
-        <button
-          className="btn btn-primary w-100 mt-1"
-          onClick={() => navigate("/login")}
-        >
-          Register
-        </button>
-
+                 <PrimaryButton text="Register" type="submit" onClick={() => navigate("/login")} />
         {/* Back */}
         <div
           className=" mt-2 back-btn"
@@ -79,10 +77,6 @@ export const Register = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      {/* <div className="position-absolute bottom-0 start-0 p-3 small text-muted">
-        © 2026 Inventory management system
-      </div> */}
       <AuthFooter />
     </div>
   );

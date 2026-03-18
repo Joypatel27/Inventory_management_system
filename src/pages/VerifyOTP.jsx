@@ -2,11 +2,11 @@ import React, { useRef, useState } from "react";
 import "../styles/CreateAccount.css";
 import "../styles/OTP.css";
 import "../styles/AuthLayout.css";
-import logo from "../assets/logo.svg";
 import emailVerification from "../assets/emailVerification.svg";
 import { useNavigate } from "react-router-dom";
 import { AuthHeader } from "../components/auth/authHeader";
 import { AuthFooter } from "../components/auth/AuthFooter";
+import { PrimaryButton } from "../components/auth/PrimaryButton";
 
 export const VerifyOTP = () => {
   const [otp, setOtp] = useState(["2", "7", "0", "4"]);
@@ -61,12 +61,9 @@ export const VerifyOTP = () => {
         </div>
 
         {/* Submit */}
-        <button
-          className="btn btn-primary w-100 mt-3"
-          onClick={() => navigate("/reset-password")}
-        >
-          Submit Code
-        </button>
+       
+                  <PrimaryButton text="Submit Code" className="mt-3" onClick={() => navigate("/reset-password")} />
+        
 
         {/* Resend */}
         <p className="small text-muted mt-3">

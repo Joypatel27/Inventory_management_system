@@ -7,6 +7,8 @@ import avatar from "../assets/avatar.svg";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthHeader } from "../components/auth/authHeader";
 import { AuthFooter } from "../components/auth/AuthFooter";
+import { AuthAvatar } from "../components/auth/AuthAvatar";
+import { PrimaryButton } from "../components/auth/PrimaryButton";
 
 export const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,9 +22,7 @@ export const Login = () => {
       {/* Login Card */}
       <div className="login-card">
         {/* Avatar */}
-        <div className="avatar mb-3">
-          <img src={avatar} alt="avatar" />
-        </div>
+        <AuthAvatar svg={avatar} />
 
         <h4 className="text-center">Login to your account</h4>
         <p className="text-muted text-center">Enter your details to login.</p>
@@ -72,12 +72,7 @@ export const Login = () => {
         </form>
 
         {/* Login Button */}
-        <button
-          className="btn btn-primary w-100 mt-3"
-          onClick={() => navigate("/dashboard")}
-        >
-          Login
-        </button>
+                  <PrimaryButton text="Login" type="submit" onClick={() => navigate("/dashboard")} />
 
         <p className="text-center text-muted small mt-2">
           Don't have an account? <Link to="/create-account">Sign Up Now</Link>

@@ -1,7 +1,8 @@
 import React from "react";
 import { AuthHeader } from "../components/auth/authHeader";
 import { AuthFooter } from "../components/auth/AuthFooter";
-// import { AuthAvatar } from "../components/auth/AuthAvatar";
+import { AuthAvatar } from "../components/auth/AuthAvatar";
+import { PrimaryButton } from "../components/auth/PrimaryButton";
 import { InputField } from "../components/form/InputField";
 import "../styles/CreateAccount.css";
 import "../styles/AuthLayout.css";
@@ -13,15 +14,11 @@ export const CreateAccount = () => {
   const navigate = useNavigate();
   return (
     <div className="vh-100 bg-light d-flex flex-column justify-content-center align-items-center">
-    
       <AuthHeader />
 
-      {/* Card */}
       <div className="card shadow-sm border-0 p-4 register-card">
         {/* Avatar */}
-        <div className="avatar mb-3">
-          <img src={avatar} alt="avatar" />
-        </div>
+        <AuthAvatar svg={avatar} />
 
         <h4 className="text-center mb-1">Create a new account</h4>
         <p className="text-muted small text-center">
@@ -33,7 +30,7 @@ export const CreateAccount = () => {
         {/* Form */}
         <form>
           {/* Full Name */}
-          
+
           <InputField
             label="Full Name"
             type="text"
@@ -71,12 +68,13 @@ export const CreateAccount = () => {
           </div>
 
           {/* Next Button */}
-          <button
+          {/* <button
             className="btn btn-primary w-100 mt-1"
             onClick={() => navigate("/register")}
           >
             Next
-          </button>
+          </button> */}
+          <PrimaryButton text="Next" onClick={() => navigate("/register")} />
         </form>
 
         {/* Login */}

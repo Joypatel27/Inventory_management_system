@@ -7,7 +7,7 @@ import forgot from "../assets/forgot.svg";
 import { useNavigate } from "react-router-dom";
 import { AuthHeader } from "../components/auth/authHeader";
 import { AuthFooter } from "../components/auth/AuthFooter";
-
+import { PrimaryButton } from "../components/auth/PrimaryButton";
 export const ForgotPassword = () => {
   const navigate = useNavigate();
 
@@ -41,12 +41,8 @@ export const ForgotPassword = () => {
         </form>
 
         {/* Send OTP Button */}
-        <button
-          className="btn btn-primary w-100 mt-2"
-          onClick={() => navigate("/verify-otp")}
-        >
-          Sent OTP
-        </button>
+                  <PrimaryButton text="Sent OTP" type="submit" onClick={() => navigate("/verify-otp")} />
+        
 
         {/* Back */}
         <div className="back-btn mt-4 " onClick={() => navigate("/login")}>
