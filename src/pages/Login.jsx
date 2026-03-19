@@ -9,6 +9,7 @@ import { AuthHeader } from "../components/auth/authHeader";
 import { AuthFooter } from "../components/auth/AuthFooter";
 import { AuthAvatar } from "../components/auth/AuthAvatar";
 import { PrimaryButton } from "../components/auth/PrimaryButton";
+import { PasswordField } from "../components/form/PasswordField";
 
 export const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -38,7 +39,7 @@ export const Login = () => {
           />
 
           {/* Password */}
-          <div className="mb-2">
+          {/* <div className="mb-2">
             <label className="form-label">Password</label>
 
             <div className="password-box">
@@ -56,7 +57,11 @@ export const Login = () => {
                 onClick={() => setShowPassword(!showPassword)}
               ></i>
             </div>
-          </div>
+          </div> */}
+           <PasswordField
+                      label="New Password"
+                      placeholder="Enter new password"
+                    />
 
           {/* Remember + Forgot */}
           <div className="login-options">

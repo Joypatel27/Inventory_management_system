@@ -1,4 +1,4 @@
-export const InputField = ({ label, type, placeholder, icon }) => {
+export const InputField = ({ label, type, placeholder, icon ,value, onChange}) => {
   return (
     <div className="mb-3">
 
@@ -12,6 +12,9 @@ export const InputField = ({ label, type, placeholder, icon }) => {
           type={type}
           className="form-control ps-5"
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          // required
         />
 
       </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const PasswordField = ({ label, placeholder }) => {
+export const PasswordField = ({ label, placeholder, value, onChange }) => {
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -16,6 +16,10 @@ export const PasswordField = ({ label, placeholder }) => {
         <input
           type={showPassword ? "text" : "password"}
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+
+          
         />
 
         <i

@@ -19,22 +19,21 @@
   color: #98a2b3;
 }
 
-/* Avatar (reuse if already exists) */
-.avatar {
+/* Avatar circle and image */
+ .avatar {
   width: 88px;
   height: 88px;
-  border-radius: 50%;
+  border-radius: 96px;
   background: #f1f3f7;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
 }
-
 .avatar img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+  width: 88px;
+  height: 88px;
+  opacity: 1;
 }
 
 /*button */
@@ -58,3 +57,6 @@
   background: #cbd5e1;
   cursor: not-allowed;
 }
+
+
+

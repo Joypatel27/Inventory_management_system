@@ -23,22 +23,6 @@
   font-size: 13px;
   margin-bottom: 8px;
 }
-/* Avatar circle */
-.avatar {
-  width: 88px;
-  height: 88px;
-  border-radius: 96px;
-  background: #f1f3f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-.avatar img {
-  width: 88px;
-  height: 88px;
-  opacity: 1;
-}
 
 /* Divider */
 .register-card hr {
@@ -46,10 +30,6 @@
   margin-top: 10px !important;
   margin-bottom: 10px !important;
 }
-/* .register-card hr {
- 
-} */
-
 /* Labels */
 .form-label {
   font-weight: 500;
@@ -93,28 +73,26 @@
 
 /* Role buttons */
 .btn {
+    /*  width: 160px; */
   height: 36px !important;
   border-radius: 8px;
   font-size: 13px;
-  /* padding: 8px; */
+    border: 1px solid #e5e7eb;
+
+  background: white;
   border-color: #e5e7eb;
 }
 
 .btn:hover {
   border-color: #3563e9;
 }
-
-/* Next button */
-.btn-primary {
-  background: #3563e9;
-  border: none;
-  height: 42px;
+.btn.active {
+  border-color:1px solid #3563e9 !important;
   border-radius: 8px;
-  font-weight: 500;
-}
-
-.btn-primary:hover {
-  background: #2e55c7;
+  background: white;
+  /* color: black; */
+  font-size: 13px;
+  /* width: 50% !important; */
 }
 
 /* Login link */
@@ -125,9 +103,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  font-size: 12px;
 }

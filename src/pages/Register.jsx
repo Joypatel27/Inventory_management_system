@@ -5,16 +5,39 @@ import "../styles/CreateAccount.css";
 import "../styles/Register.css";
 import "../styles/AuthLayout.css";
 import avatar from "../assets/avatar.svg";
-import { useNavigate } from "react-router-dom";
+import {useLocation, useNavigate } from "react-router-dom";
 import { AuthHeader } from "../components/auth/authHeader";
 import { AuthFooter } from "../components/auth/AuthFooter";
 import { AuthAvatar } from "../components/auth/AuthAvatar";
 import { PrimaryButton } from "../components/auth/PrimaryButton";
+// import { useLocation } from "react-router-dom";
 
 export const Register = () => {
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const location = useLocation();
+  const { fullName, department, role } = location.state || {};
+  console.log(location.state);
+
+  const handleRegister = () => {
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+    const data = {
+      fullName,
+      department,
+      role,
+      email,
+      password,
+    };
+    console.log(data);
+    navigate("/login");
+  };
 
   return (
     <div className="vh-100 d-flex flex-column justify-content-center align-items-center">
@@ -27,7 +50,6 @@ export const Register = () => {
           <img src={avatar} alt="avatar" />
         </div> */}
         <AuthAvatar svg={avatar} />
-        
 
         <h4 className="text-center">Register for System Access</h4>
         <p className="text-muted text-center">Enter your details to Sign up.</p>
@@ -54,19 +76,32 @@ export const Register = () => {
             type="text"
             placeholder="Enter your email"
             icon="fa-regular fa-envelope"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           {/* Password */}
-          <PasswordField label="Password" placeholder="Enter password" />
+          <PasswordField
+            label="Password"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
           <PasswordField
             label="Confirm Password"
             placeholder="Confirm password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </form>
 
         {/* Register Button */}
-                 <PrimaryButton text="Register" type="submit" onClick={() => navigate("/login")} />
+        <PrimaryButton
+          text="Register"
+          type="submit"
+          onClick={handleRegister}
+        />
         {/* Back */}
         <div
           className=" mt-2 back-btn"
